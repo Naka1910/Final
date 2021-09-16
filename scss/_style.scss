@@ -1,35 +1,31 @@
 body{
+ background-color: #d7bcbc;
     @extend %centering;
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,48,9,1) 35%, rgba(0,212,255,1) 100%);
-.header{
+    .header{
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,48,9,1) 95%, rgba(0,212,255,1) 100%);
+    align-items: flex-end;
+    background: rgb(69,4,4);
+    background: linear-gradient(80deg, rgba(69,4,4,1) 8%, rgba(41,41,48,1) 76%);
     padding: 20px;
     &__a{
         color: #a59476;
         font-family: 'Dancing Script', cursive;
         font-size: 25px;
-        opacity: 100%;
         &:hover{
-            opacity: 60%;
+            opacity: 50%;
         }
     }
+
+
     &__container{
         width: 500px;
     }
     &__ul{
         display: flex;
         justify-content: space-between;
-        align-items: center;
-    }
-    &__a--li{
-        font-size: 18px;
-        color: rgb(100, 64, 17);
 
     }
+
 }
 }
