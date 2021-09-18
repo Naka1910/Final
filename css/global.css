@@ -60,6 +60,32 @@ body {
 }
 
 body .header {
+  background: #450404;
+  background: linear-gradient(80deg, #450404 8%, #292930 76%);
+  padding: 20px;
+}
+
+body .header__logo {
+  color: #a59476;
+  font-family: "Dancing Script", cursive;
+  font-size: 25px;
+}
+
+body .header__logo:hover {
+  opacity: 50%;
+}
+
+body .header__a {
+  color: #a59476;
+  font-family: "Dancing Script", cursive;
+  font-size: 25px;
+}
+
+body .header__a:hover {
+  opacity: 50%;
+}
+
+body .header__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -69,31 +95,95 @@ body .header {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  background: #450404;
-  background: linear-gradient(80deg, #450404 8%, #292930 76%);
-  padding: 20px;
 }
 
-body .header__a {
-  color: #a59476;
-  font-family: 'Dancing Script', cursive;
-  font-size: 25px;
-}
-
-body .header__a:hover {
-  opacity: 50%;
-}
-
-body .header__container {
-  width: 500px;
-}
-
-body .header__ul {
+body .header__menu {
+  max-width: 500px;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  body .header__menu {
+    display: block;
+    text-align: center;
+  }
+}
+
+body .header__icons {
+  max-width: 100px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #d7bcbc;
+}
+
+@media (max-width: 768px) {
+  body .header__icons {
+    display: none;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  body .header__menu--icons {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  body .header__menu--open-menu {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  body .header__icons--open-socicon {
+    display: none;
+  }
+}
+
+body .header__burger {
+  color: #d7bcbc;
+  display: none;
+  font-size: 30px;
+  position: absolute;
+  top: 70px;
+  right: 40px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  body .header__burger {
+    display: block;
+  }
+}
+
+body .footer {
+  margin-top: 500px;
+}
+
+body .footer__div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #462e04;
+  background: #292930;
+  background: linear-gradient(74deg, #292930 8%, #450404 76%);
+  height: 80px;
 }
 /*# sourceMappingURL=global.css.map */

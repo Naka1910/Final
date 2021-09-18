@@ -6,24 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Georgian Wine </title>
     <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="js/main.js">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9879aac9a6.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <header class="header">
-        <a class="header__a" href="index.html"> <img src="images/logo.svg" alt="image">Georgian Wine </a>
-        <div class="header__container">
-        <nav class="header__nav">
-            <ul class="header__ul">
+        <div id="mainmenu" class= "header__container">
+        <a class="header__logo" href="index.html"> <img src="images/logo.svg" alt="image">Georgian Wine </a>
+            <ul id="menu" class="header__menu">
                 <li><a class="header__a" href="#">Introduction</a></li>
                 <li><a class="header__a "href="#">About</a></li>
                 <li><a class="header__a"href="#">Special</a></li>
                 <li><a class="header__a"href="#">Contact</a></li>
 
             </ul>
-        </nav>
-        </div>
+            <ul id="socicon" class="header__icons">
+                <li> <i class="fab fa-facebook-f"></i> </li>
+                <li> <i class="fab fa-instagram"></i> </li>
+                <li> <i class="fab fa-twitter"></i> </li>
+                <li> <i class="fab fa-github"></i> </li>   
+            </ul>
+            <div id="burger-menu" class="header__burger">
+                <i class="fas fa-bars"></i>
+            </div>
     
+      </div>
+
+
+
+</header>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="js/main.js"></script>
+<footer class="footer">
+    <div class="footer__div">
+        <a class="header__a" href="index.html"> <img src="images/logo.svg" alt="image">Georgian Wine </a>
+        <ul class="footer__ul">
+            <li>Home</li>
+            <li>Discovery</li>
+            <li>Photos</li>
+            <li>contact</li>
+        </ul>
+        <ul class="footer__ul">
+            <li>Home</li>
+            <li>Discovery</li>
+            <li>Photos</li>
+            <li>contact</li>
+        </ul>
+  </div> 
+</footer>
+
 </body>
 </html>

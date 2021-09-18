@@ -1,31 +1,104 @@
-body{
- background-color: #d7bcbc;
-    @extend %centering;
-    .header{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    background: rgb(69,4,4);
-    background: linear-gradient(80deg, rgba(69,4,4,1) 8%, rgba(41,41,48,1) 76%);
+body {
+  background-color: $color1;
+  @extend %centering;
+  .header {
+    background: rgb(69, 4, 4);
+    background: linear-gradient( 80deg, rgba(69, 4, 4, 1) 8%, rgba(41, 41, 48, 1) 76%);
     padding: 20px;
-    &__a{
-        color: #a59476;
-        font-family: 'Dancing Script', cursive;
-        font-size: 25px;
-        &:hover{
-            opacity: 50%;
-        }
+    &__logo{
+      color: $color2;
+      font-family: "Dancing Script", cursive;
+      font-size: 25px;
+      &:hover {
+        opacity: 50%;
+      }
+    }
+    &__a {
+      color: $color2;
+      font-family: "Dancing Script", cursive;
+      font-size: 25px;
+      &:hover {
+        opacity: 50%;
+      }
+
     }
 
-
-    &__container{
-        width: 500px;
+    &__container {
+  
+      display:$flex;
+      justify-content: space-between;
+      align-items: flex-end;
     }
-    &__ul{
-        display: flex;
-        justify-content: space-between;
+    &__menu{
+      max-width: 500px;
+      width: $width;
+      display: $flex;
+      justify-content: space-between;
+      @media(max-width:768px){
+        display: block;
+        text-align: center;
+      }
+      }
+    
+    
+    &__icons{
+      max-width: 100px;
+      width: $width;
+      display: $flex;
+      justify-content: space-between;
+      color: $color1;
+      @media(max-width:768px){
+        display: none;
+        justify-content: center;
+      }
 
     }
+    &__menu--icons{
+      @media(max-width:768px){
+        display: none;
+      }
+    }
+    &__menu--open-menu{
+   @media(max-width:768px){
+        display: none;
+      }   
+    }
+    &__icons--open-socicon{
+      @media(max-width:768px){
+        display: none;
+      }
+    }
 
+    
+    &__burger{
+      color: $color1;
+      display: none;
+      font-size: 30px;
+      position: absolute;
+      top: 70px;
+      right: 40px;
+      cursor:pointer;
+      @media(max-width:768px){
+        display: block;
+        
+      }
+
+    }
+ 
+  }
+
+
+.footer{
+  margin-top: 500px;
+  &__div{
+  display: flex;
+  justify-content: space-between;
+  color: #462e04;
+  background: rgb(41,41,48);
+  background: linear-gradient(74deg, rgba(41,41,48,1) 8%, rgba(69,4,4,1) 76%);
+  height: 80px;
 }
 }
+}
+
+
