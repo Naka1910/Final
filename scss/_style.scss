@@ -1,10 +1,16 @@
 body {
   background-color: $color1;
+  background-image: url("../images/bg1.jpg");
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: cover;
   @extend %centering;
   .header {
     background: rgb(69, 4, 4);
     background: linear-gradient( 80deg, rgba(69, 4, 4, 1) 8%, rgba(41, 41, 48, 1) 76%);
     padding: 20px;
+    margin-bottom: 50px;
+    border: solid $color2 2px;
     &__logo{
       color: $color2;
       font-family: "Dancing Script", cursive;
@@ -17,10 +23,11 @@ body {
       color: $color2;
       font-family: "Dancing Script", cursive;
       font-size: 25px;
+      
       &:hover {
         opacity: 50%;
       }
-
+  
     }
 
     &__container {
@@ -28,16 +35,13 @@ body {
       display:$flex;
       justify-content: space-between;
       align-items: flex-end;
+      background-image:url()
     }
     &__menu{
       max-width: 500px;
       width: $width;
       display: $flex;
       justify-content: space-between;
-      @media(max-width:768px){
-        display: block;
-        text-align: center;
-      }
       }
     
     
@@ -47,57 +51,153 @@ body {
       display: $flex;
       justify-content: space-between;
       color: $color1;
-      @media(max-width:768px){
-        display: none;
-        justify-content: center;
-      }
-
     }
-    &__menu--icons{
-      @media(max-width:768px){
-        display: none;
-      }
-    }
-    &__menu--open-menu{
-   @media(max-width:768px){
-        display: none;
-      }   
-    }
-    &__icons--open-socicon{
-      @media(max-width:768px){
-        display: none;
-      }
-    }
-
     
     &__burger{
       color: $color1;
       display: none;
       font-size: 30px;
       position: absolute;
-      top: 70px;
+      top: 90px;
       right: 40px;
       cursor:pointer;
       @media(max-width:768px){
         display: block;
-        
       }
 
     }
  
   }
+// start section-1
+.section-1{
+
+  &__container{
+    position: relative;
+    background-color: rgb(170, 170, 170);
+    background-blend-mode: multiply;
+    background-image:url("../images/bg2.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: bottom;
+    border: $color3 solid 2px;
+  }
 
 
+ &__title{
+   position: absolute;
+   font-size: 30px;
+   color: $color4;
+   top: 30%;
+   left: 44%;
+   transform: translate(-50%,-50%);
+   animation: fade2 1s infinite alternate;
+
+  
+  @media(max-width:768px){
+    text-align: center;
+    animation: none;
+  }
+
+}
+
+
+  &__image{
+   display: $flex;
+   justify-content: $between;
+ }
+
+  &__img{
+    width: 200px;
+    height: 250px;
+    object-fit: contain;
+    opacity: 80%;
+    &:hover {
+      position: $relative;
+      bottom: -10px;
+      left: 5px;
+    }
+  
+
+  }
+
+  &__text{
+    position: $absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-75%,0%);
+    color: #dad0d0;
+    font-family: 'Satisfy';
+    line-height: 30px;
+    font-size: 18px;
+    max-width: 600px;
+    width: 100%;
+
+  }
+}
+// starts section-2
+.section-2{
+ &__container{
+   position: relative;
+   background-color: rgb(180, 180, 180);
+   background-blend-mode: multiply;
+   background-image:url("../images/bg4.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   margin: 50px;
+   border: $color3 solid 2px;
+
+ }
+ &__title{
+  position: absolute;
+  font-size: 25px;
+  color: $color4;
+  top: 5%;
+  left: 55%;
+  transform: translate(-50%,-50%);
+  animation: fade2 1s infinite linear;
+  @keyframes fade2 {
+   from { right:  0px;opacity:3}
+   to   {right: 0px; opacity: 0; }
+ }
+ }
+ &__text{
+   position: $absolute;
+   top: 50%;
+   left:50%;
+   transform: translate(-50%,-50%);
+   color: #e9dcdc;
+   font-family: 'Satisfy';
+   line-height: 25px;
+   font-size: 18px;
+   max-width: 450px;
+   width: 100%;
+ }
+ &__img{
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+  opacity: 80%;
+ }
+ &__images{
+  display: $flex;
+  justify-content: $between;
+}
+
+
+}
 .footer{
-  margin-top: 500px;
   &__div{
   display: flex;
   justify-content: space-between;
   color: #462e04;
+  border: solid $color2 2px;
+
   background: rgb(41,41,48);
   background: linear-gradient(74deg, rgba(41,41,48,1) 8%, rgba(69,4,4,1) 76%);
   height: 80px;
 }
+
 }
 }
 
