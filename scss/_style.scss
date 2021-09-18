@@ -8,7 +8,7 @@ body {
   .header {
     background: rgb(69, 4, 4);
     background: linear-gradient( 80deg, rgba(69, 4, 4, 1) 8%, rgba(41, 41, 48, 1) 76%);
-    padding: 20px;
+    padding: $padding;
     margin-bottom: 50px;
     border: solid $color2 2px;
     &__logo{
@@ -107,7 +107,7 @@ body {
  }
 
   &__img{
-    width: 200px;
+    max-width: 200px;
     height: 250px;
     object-fit: contain;
     opacity: 80%;
@@ -155,7 +155,7 @@ body {
   top: 5%;
   left: 55%;
   transform: translate(-50%,-50%);
-  animation: fade2 1s infinite linear;
+  animation: fade2 2s infinite linear;
   @keyframes fade2 {
    from { right:  0px;opacity:3}
    to   {right: 0px; opacity: 0; }
@@ -174,7 +174,7 @@ body {
    width: 100%;
  }
  &__img{
-  width: 300px;
+  max-width: 300px;
   height: 300px;
   object-fit: contain;
   opacity: 80%;
@@ -187,18 +187,13 @@ body {
 
 }
 .footer{
-  &__div{
-  display: flex;
-  justify-content: space-between;
-  color: #462e04;
-  border: solid $color2 2px;
-
   background: rgb(41,41,48);
   background: linear-gradient(74deg, rgba(41,41,48,1) 8%, rgba(69,4,4,1) 76%);
-  height: 80px;
+  padding: $padding;
+  border: solid $color2 2px;
 }
 
-}
+
 }
 
 
