@@ -3,18 +3,40 @@ $color1:#c5b8b8;
 $color2:#a59476;
 $color3:#450404;
 $color4:#252726;
+$color5:#aaaaaa;
+$color6:#757070;
+$color7:#ccbe8b;
+$color8:blanchedalmond;
 
 
 // sizes
-$width:100%;
+
 $padding:20px;
+$font:30px;
+$line:25px;
+$fonts:15px;
 
 
 // display
 $flex:flex;
 $none:none;
 $between:space-between;
+$around:space-around;
+$column:column;
 
 // position
 $relative:relative;
 $absolute:absolute;
+
+
+
+// most used 
+$center:center;
+$width:100%;
+// background image
+$cover:cover;
+$no-repeat:no-repeat;
+// fonts
+$script:"Dancing Script", cursive;
+$satis:'Satisfy';
+$popin: 'Poppins';

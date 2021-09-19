@@ -3,197 +3,433 @@ body {
   background-image: url("../images/bg1.jpg");
   background-blend-mode: multiply;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: $cover;
   @extend %centering;
+
   .header {
     background: rgb(69, 4, 4);
     background: linear-gradient( 80deg, rgba(69, 4, 4, 1) 8%, rgba(41, 41, 48, 1) 76%);
     padding: $padding;
-    margin-bottom: 50px;
-    border: solid $color2 2px;
+    margin: 50px 0px;
+    @include border(3px,solid, $color2);
+    display: $flex;
+    justify-content: $between;
     &__logo{
       color: $color2;
-      font-family: "Dancing Script", cursive;
-      font-size: 25px;
+      font-family: $script;
+      font-size: $font;
       &:hover {
         opacity: 50%;
       }
+
+    }
+    &__container {
+      max-width: 800px;
+      width: $width;
+      display:$flex;
+      justify-content:$around;
+      align-items: flex-end;
+
+ 
     }
     &__a {
       color: $color2;
-      font-family: "Dancing Script", cursive;
-      font-size: 25px;
+      font-family: $script;
+      font-size: $font;
       
       &:hover {
         opacity: 50%;
       }
   
-    }
-
-    &__container {
-  
-      display:$flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      background-image:url()
+      &--active{
+        color: $color1;
+      }
     }
     &__menu{
-      max-width: 500px;
       width: $width;
       display: $flex;
-      justify-content: space-between;
+      justify-content:$around;
+      @media    (max-width:768px){
+        display: $none;
       }
-    
-    
-    &__icons{
-      max-width: 100px;
-      width: $width;
-      display: $flex;
-      justify-content: space-between;
-      color: $color1;
-    }
-    
+      }
+      &__icons{
+        max-width: 100px;
+        width: $width;
+        display: $flex;
+        justify-content:$between;
+        @media    (max-width:768px){
+          display: $none;
+        }
+      }
+      &__icon{
+        color: $color1;
+      }
+
+
+
     &__burger{
       color: $color1;
-      display: none;
-      font-size: 30px;
-      position: absolute;
+      display: $none;
+      font-size: $font;
+      position: $absolute;
       top: 90px;
       right: 40px;
       cursor:pointer;
       @media(max-width:768px){
-        display: block;
+        display: inline-block;
       }
-
     }
- 
+
   }
-// start section-1
+  // start section-1
 .section-1{
 
   &__container{
-    position: relative;
-    background-color: rgb(170, 170, 170);
+    position: $relative;
+    background-color: $color5;
     background-blend-mode: multiply;
     background-image:url("../images/bg2.jpg");
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size:$cover;
     background-position: bottom;
-    border: $color3 solid 2px;
+    @include border( 2px, solid, $color3);
   }
-
-
- &__title{
-   position: absolute;
-   font-size: 30px;
-   color: $color4;
-   top: 30%;
-   left: 44%;
-   transform: translate(-50%,-50%);
-   animation: fade2 1s infinite alternate;
-
   
+ &__title{
+  position: $absolute;
+  font-size: $font;
+  color: $color4;
+  font-family: $satis;
+  top: 30%;
+  left: 44%;
+  transform: translate(-50%,-50%);
+  animation: fade 2s infinite alternate;
   @media(max-width:768px){
-    text-align: center;
-    animation: none;
+    animation: $none;
+    transform: $none;
+    color: $color7;
+    top:0px;
+    left:0px;
+  }
+ }
+ &__image{
+  display: $flex;
+  justify-content: $between;
+  @media(max-width:768px){
+    flex-direction: $column;
+    align-items: $center;
+    margin-top: 50px;
+  }
+}
+&__imgtxt{
+  color: $color7;
+  font-size: $font;
+  font-family: $satis;
+  display: $none;
+  @media(max-width:768px){
+    display: block;
+  }
+}
+
+&__img{
+  max-width: 200px;
+  height: 250px;
+  object-fit: contain;
+  opacity: 80%;
+  @media(max-width:500px){
+    max-width: 150px;
+    height: 150px;
+
+  }
+  &:hover {
+    position: $relative;
+    bottom: -10px;
+    left: 5px;
   }
 
 }
-
-
-  &__image{
-   display: $flex;
-   justify-content: $between;
- }
-
-  &__img{
-    max-width: 200px;
-    height: 250px;
-    object-fit: contain;
-    opacity: 80%;
-    &:hover {
-      position: $relative;
-      bottom: -10px;
-      left: 5px;
-    }
-  
-
+&__text{
+  position: $absolute;
+  top: 40%;
+  left:50%;
+  transform: translate(-75%,0%);
+  color: $color7;
+  font-family: $popin;
+  line-height: 30px;
+  font-size: 15px;
+  max-width: 600px;
+  width: 100%;
+  @media(max-width:768px){
+    display: $none;
   }
+}
 
+
+}
+// starts section-2
+.section-2{
+  &__container{
+    position: $relative;
+    background-color: $color5;
+    background-blend-mode: multiply;
+    background-image:url("../images/bg4.jpg");
+    background-repeat: no-repeat;
+    background-size: $cover;
+    background-position: $center;
+    margin: 50px;
+    @include border( 2px, solid, $color3);
+
+ 
+  }
+  &__title{
+   position: $absolute;
+   font-size:$font;
+   color: $color4;
+   font-family: $satis;
+   top: 7%;
+   left: 55%;
+   transform: translate(-50%,-50%);
+   animation: fade 2s infinite linear;
+   @keyframes fade {
+    from { right:  0px;opacity:3}
+    to   {right: 0px; opacity: 0; }
+  }
+  @media(max-width:768px){
+    animation: $none;
+    transform: $none;
+    color: $color7;
+    top:0px;
+    left:0px;
+  }
+  @media(max-width:400px){
+    font-size: 18px;
+  }
+  }
   &__text{
     position: $absolute;
     top: 50%;
     left:50%;
-    transform: translate(-75%,0%);
-    color: #dad0d0;
-    font-family: 'Satisfy';
-    line-height: 30px;
-    font-size: 18px;
-    max-width: 600px;
+    transform: translate(-50%,-50%);
+    color: $color7;
+    font-family: $popin;
+    line-height: $line;
+    font-size: 15px;
+    max-width: 450px;
     width: 100%;
+    @media(max-width:768px){
+      display: $none;
+    }
+  }
+  &__img{
+   max-width: 300px;
+   height: 300px;
+   object-fit: contain;
+   opacity: 80%;
+   @media(max-width:500px){
+    max-width: 150px;
+    height: 150px;
 
   }
-}
-// starts section-2
-.section-2{
- &__container{
-   position: relative;
-   background-color: rgb(180, 180, 180);
-   background-blend-mode: multiply;
-   background-image:url("../images/bg4.jpg");
-   background-repeat: no-repeat;
-   background-size: cover;
-   background-position: center;
-   margin: 50px;
-   border: $color3 solid 2px;
+  @media(max-width:400px){
+    max-width: 100px;
+    height: 100px;
 
+  }
+  }
+  &__images{
+   display: $flex;
+   justify-content: $between;
+   @media(max-width:768px){
+    flex-direction: $column;
+    margin-top: 50px;
+  }
+  @media(max-width:500px){
+    align-items: $center;
+    justify-content: $center;
+  }
  }
- &__title{
-  position: absolute;
-  font-size: 25px;
-  color: $color4;
-  top: 5%;
-  left: 55%;
-  transform: translate(-50%,-50%);
-  animation: fade2 2s infinite linear;
-  @keyframes fade2 {
-   from { right:  0px;opacity:3}
-   to   {right: 0px; opacity: 0; }
- }
- }
- &__text{
-   position: $absolute;
-   top: 50%;
-   left:50%;
-   transform: translate(-50%,-50%);
-   color: #e9dcdc;
-   font-family: 'Satisfy';
-   line-height: 25px;
-   font-size: 18px;
-   max-width: 450px;
-   width: 100%;
- }
- &__img{
-  max-width: 300px;
+} 
+// section-3 start
+.section-3{
+  &__container{
+  position: $relative;
+  background-color: $color6;
+  background-blend-mode: multiply;
+ background-image:url("../images/bottles.jpg");
+ background-repeat: $no-repeat;
+ background-size: $cover;
+ background-position: $center;
+ display: $flex;
+ justify-content: $between;
+ margin-bottom: 30px;
+ @include border( 2px, solid, $color3);
+ @media(max-width:768px){
+  flex-direction: $column;
+}
+
+}
+
+ &__textarea{
+  max-width: 500px;
+  width: $width;
   height: 300px;
-  object-fit: contain;
-  opacity: 80%;
+  background-color: $color5;
+  background-blend-mode: multiply;
+  background-image:url("../images/kvevri.jpg") ;
+  background-size: $cover ;
+  background-position: $center;
+  background-repeat: $no-repeat;
+  resize:$none;
+  @include border(2px, solid, $color4);
+   &::placeholder{
+     position: $absolute;
+     color: $color7;
+     font-family: $satis;
+     font-size:$font;
+     top: 30%;
+    left:35%;
+    transform: translate(-50%,50%);
+    opacity: 60%;
  }
- &__images{
+ @media(max-width:768px){
+  max-width: 300px;
+}
+}
+&__title{
+  color: $color7;
+  max-width: 500px;
+  width: $width;
+  position: $absolute;
+  font-size: $font;
+  font-family: $satis;
+  top: 20%;
+  left: 73%;
+  transform: translate(-50%,-50%);
+  @media(max-width:768px){
+    transform:$none;
+    color: $color7;
+    font-size: 20px;
+    top:10px;
+    left: 5px;
+  }
+  
+  
+
+}
+&__wraper{
   display: $flex;
-  justify-content: $between;
+  max-width: 600px;
+  width: $width;
+  justify-content: $around;
+  align-items: $center;
+  @media(max-width:768px){
+    flex-direction: $column;
+    align-items: flex-start;
+  }
 }
+   &__input{
+    max-width: 400px;
+    width: $width;
+    height: 60px;
+    background-color: $color8;
+    @include border(2px, solid, $color6);
+    &::placeholder{
+      color: $color7;
+      font-family: $popin;
+      font-size: 18px;
+    }
+    @media(max-width:768px){
+      max-width: 200px;
+    }
+  }
+   &__button{
+     max-width: 100px;
+     width: $width;
+     height: 30px;
+     border-radius: $fonts;
+     font-family: $popin;
+     color: $color4;
+    background-color: $color8;
+    @include border(2px, solid, $color6);
+     font-size: $fonts;
+   }
+ 
+
+
+
+
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
 .footer{
   background: rgb(41,41,48);
   background: linear-gradient(74deg, rgba(41,41,48,1) 8%, rgba(69,4,4,1) 76%);
   padding: $padding;
   border: solid $color2 2px;
-}
+  display: $flex;
+  @include border(3px,solid, $color2);
+  &__logo{
+    max-width: 300px;
+    color: $color2;
+    font-family: $script;
+    font-size: $font;
+  }
+  &__div{
+      max-width: 700px;
+      width: $width;
+      display:$flex;
+      justify-content:$between;
+      align-items: flex-end;
+      margin-left: 200px;
+      @media(max-width:768px){
+        flex-direction: $column;
+      }
+  }
+  &__menu{
+    @media(max-width:500px){
+      display: $none;
+    }
+  }
+  &__icons{
+    max-width: 100px;
+    width: $width;
+    display: $flex;
+    justify-content:$between;
+
+  }
+  &__li {
+    color: $color2;
+    font-family: $popin;
+    font-size: 15px;
+    
+    &:hover {
+      opacity: 50%;
+    }
+  }
+  &__margin{
+    margin-bottom: 10px;
+
+  }
+  &__icon{
+    color: $color1;
+  }
 
 
 }
 
 
+
+}
