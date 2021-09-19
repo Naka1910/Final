@@ -179,7 +179,7 @@ body .header__burger {
 
 @media (max-width: 768px) {
   body .header__burger {
-    display: inline-block;
+    display: block;
   }
 }
 
