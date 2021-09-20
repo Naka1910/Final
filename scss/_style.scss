@@ -8,425 +8,573 @@ body {
 
   .header {
     background: rgb(69, 4, 4);
-    background: linear-gradient( 80deg, rgba(69, 4, 4, 1) 8%, rgba(41, 41, 48, 1) 76%);
+    background: linear-gradient(
+      80deg,
+      rgba(69, 4, 4, 1) 8%,
+      rgba(41, 41, 48, 1) 76%
+    );
     padding: $padding;
     margin: 50px 0px;
-    @include border(3px,solid, $color2);
+    @include border(3px, solid, $color2);
     display: $flex;
     justify-content: $between;
-    &__logo{
+    &__logo {
       color: $color2;
       font-family: $script;
       font-size: $font;
       &:hover {
         opacity: 50%;
       }
-
     }
     &__container {
       max-width: 800px;
       width: $width;
-      display:$flex;
-      justify-content:$around;
+      display: $flex;
+      justify-content: $around;
       align-items: flex-end;
-
- 
     }
     &__a {
       color: $color2;
       font-family: $script;
       font-size: $font;
-      
+
       &:hover {
         opacity: 50%;
       }
-  
-      &--active{
+
+      &--active {
         color: $color1;
       }
     }
-    &__menu{
+    &__menu {
       width: $width;
       display: $flex;
-      justify-content:$around;
-      @media    (max-width:768px){
+      justify-content: $around;
+      @media (max-width: 768px) {
         display: $none;
       }
+    }
+    &__icons {
+      max-width: 100px;
+      width: $width;
+      display: $flex;
+      justify-content: $between;
+      @media (max-width: 768px) {
+        display: $none;
       }
-      &__icons{
-        max-width: 100px;
-        width: $width;
-        display: $flex;
-        justify-content:$between;
-        @media    (max-width:768px){
-          display: $none;
-        }
-      }
-      &__icon{
-        color: $color1;
-      }
-    &__burger{
+    }
+    &__icon {
+      color: $color1;
+    }
+    &__burger {
       color: $color1;
       display: $none;
       font-size: $font;
       position: $absolute;
       top: 90px;
       right: 40px;
-      cursor:pointer;
-      @media(max-width:768px){
+      cursor: pointer;
+      @media (max-width: 768px) {
         display: block;
       }
     }
-
   }
   // start section-1
-.section-1{
-
-  &__container{
-    position: $relative;
-    background-color: $color5;
-    background-blend-mode: multiply;
-    background-image:url("../images/bg2.jpg");
-    background-repeat: no-repeat;
-    background-size:$cover;
-    background-position: bottom;
-    @include border( 2px, solid, $color3);
-  }
-  
- &__title{
-  position: $absolute;
-  font-size: $font;
-  color: $color4;
-  font-family: $satis;
-  top: 30%;
-  left: 44%;
-  transform: translate(-50%,-50%);
-  animation: fade 2s infinite alternate;
-  @media(max-width:768px){
-    animation: $none;
-    transform: $none;
-    color: $color7;
-    top:0px;
-    left:0px;
-  }
- }
- &__image{
-  display: $flex;
-  justify-content: $between;
-  @media(max-width:768px){
-    flex-direction: $column;
-    align-items: $center;
-    margin-top: 50px;
-  }
-}
-&__imgtxt{
-  color: $color7;
-  font-size: $font;
-  font-family: $satis;
-  display: $none;
-  @media(max-width:768px){
-    display: block;
-  }
-}
-
-&__img{
-  max-width: 200px;
-  height: 250px;
-  object-fit: contain;
-  opacity: 80%;
-  @media(max-width:500px){
-    max-width: 150px;
-    height: 150px;
-
-  }
-  &:hover {
-    position: $relative;
-    bottom: -10px;
-    left: 5px;
-  }
-
-}
-&__text{
-  position: $absolute;
-  top: 40%;
-  left:50%;
-  transform: translate(-75%,0%);
-  color: $color7;
-  font-family: $popin;
-  line-height: 30px;
-  font-size: 15px;
-  max-width: 600px;
-  width: 100%;
-  @media(max-width:768px){
-    display: $none;
-  }
-}
-
-
-}
-// starts section-2
-.section-2{
-  &__container{
-    position: $relative;
-    background-color: $color5;
-    background-blend-mode: multiply;
-    background-image:url("../images/bg4.jpg");
-    background-repeat: no-repeat;
-    background-size: $cover;
-    background-position: $center;
-    margin: 50px;
-    @include border( 2px, solid, $color3);
-
- 
-  }
-  &__title{
-   position: $absolute;
-   font-size:$font;
-   color: $color4;
-   font-family: $satis;
-   top: 7%;
-   left: 55%;
-   transform: translate(-50%,-50%);
-   animation: fade 2s infinite linear;
-   @keyframes fade {
-    from { right:  0px;opacity:3}
-    to   {right: 0px; opacity: 0; }
-  }
-  @media(max-width:768px){
-    animation: $none;
-    transform: $none;
-    color: $color7;
-    top:0px;
-    left:0px;
-  }
-  @media(max-width:400px){
-    font-size: 18px;
-  }
-  }
-  &__text{
-    position: $absolute;
-    top: 50%;
-    left:50%;
-    transform: translate(-50%,-50%);
-    color: $color7;
-    font-family: $popin;
-    line-height: $line;
-    font-size: 15px;
-    max-width: 450px;
-    width: 100%;
-    @media(max-width:768px){
-      display: $none;
+  .section-1 {
+    &__container {
+      position: $relative;
+      background-color: $color1;
+      background-blend-mode: multiply;
+      background-image: url("../images/bg2.jpg");
+      background-repeat: no-repeat;
+      background-size: $cover;
+      background-position: bottom;
+      @include border(2px, solid, $color3);
     }
-  }
-  &__img{
-   max-width: 300px;
-   height: 300px;
-   object-fit: contain;
-   opacity: 80%;
-   @media(max-width:500px){
-    max-width: 150px;
-    height: 150px;
 
-  }
-  @media(max-width:400px){
-    max-width: 100px;
-    height: 100px;
+    &__title {
+      position: $absolute;
+      font-size: $font;
+      color: $color4;
+      font-family: $satis;
+      top: 10%;
+      left: 60%;
+      transform: translate(-50%, -50%);
+      animation: fade 2s infinite alternate;
+      z-index: 4;
+      &::after {
+        content: url("../images/little-glass.svg");
+      }
+      @media (max-width: 768px) {
+        animation: $none;
+        transform: $none;
+        color: $color7;
+        top: 0px;
+        left: 0px;
+      }
+    }
+    &__image {
+      display: $flex;
+      justify-content: $around;
+      @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 30px;
+      }
+    }
 
-  }
-  }
-  &__images{
-   display: $flex;
-   justify-content: $between;
-   @media(max-width:768px){
-    flex-direction: $column;
-    margin-top: 50px;
-  }
-  @media(max-width:500px){
-    align-items: $center;
-    justify-content: $center;
-  }
- }
-} 
-// section-3 start
-.section-3{
-  &__container{
-  position: $relative;
-  background-color: $color6;
-  background-blend-mode: multiply;
- background-image:url("../images/bottles.jpg");
- background-repeat: $no-repeat;
- background-size: $cover;
- background-position: $center;
- display: $flex;
- justify-content: $between;
- margin-bottom: 30px;
- @include border( 2px, solid, $color3);
- @media(max-width:768px){
-  flex-direction: $column;
-}
-
-}
-
- &__textarea{
-  max-width: 500px;
-  width: $width;
-  height: 300px;
-  background-color: $color5;
-  background-blend-mode: multiply;
-  background-image:url("../images/kvevri.jpg") ;
-  background-size: $cover ;
-  background-position: $center;
-  background-repeat: $no-repeat;
-  resize:$none;
-  @include border(2px, solid, $color4);
-   &::placeholder{
-     position: $absolute;
-     color: $color7;
-     font-family: $satis;
-     font-size:$font;
-     top: 30%;
-    left:35%;
-    transform: translate(-50%,50%);
-    opacity: 60%;
- }
- @media(max-width:768px){
-  max-width: 300px;
-}
-}
-&__title{
-  color: $color7;
-  max-width: 500px;
-  width: $width;
-  position: $absolute;
-  font-size: $font;
-  font-family: $satis;
-  top: 20%;
-  left: 73%;
-  transform: translate(-50%,-50%);
-  @media(max-width:768px){
-    transform:$none;
-    color: $color7;
-    font-size: 20px;
-    top:10px;
-    left: 5px;
-  }
-  
-  
-
-}
-&__wraper{
-  display: $flex;
-  max-width: 600px;
-  width: $width;
-  justify-content: $around;
-  align-items: $center;
-  @media(max-width:768px){
-    flex-direction: $column;
-    align-items: flex-start;
-  }
-}
-   &__input{
-    max-width: 400px;
-    width: $width;
-    height: 60px;
-    background-color: $color8;
-    @include border(2px, solid, $color6);
-    &::placeholder{
+    &__img {
+      max-width: 200px;
+      height: 250px;
+      object-fit: contain;
+      opacity: 80%;
+      @media (max-width: 500px) {
+        max-width: 150px;
+        height: 150px;
+      }
+      &:hover {
+        position: $relative;
+        bottom: -10px;
+        left: 5px;
+      }
+    }
+    &__text {
       color: $color7;
       font-family: $popin;
-      font-size: 18px;
-    }
-    @media(max-width:768px){
-      max-width: 200px;
+      line-height: 30px;
+      font-size: 15px;
+      max-width: 450px;
+      width: 100%;
+      z-index: 6;
+      margin-top: 50px;
+      @media (max-width: 768px) {
+        font-size: 10px;
+        transform: $none;
+      }
     }
   }
-   &__button{
-     max-width: 100px;
-     width: $width;
-     height: 30px;
-     border-radius: $fonts;
-     font-family: $popin;
-     color: $color4;
-    background-color: $color8;
-    @include border(2px, solid, $color6);
-     font-size: $fonts;
-   }
- 
+  // starts section-2
+  .section-2 {
+    &__container {
+      position: $relative;
 
-
-
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-.footer{
-  background: rgb(41,41,48);
-  background: linear-gradient(74deg, rgba(41,41,48,1) 8%, rgba(69,4,4,1) 76%);
-  padding: $padding;
-  border: solid $color2 2px;
-  display: $flex;
-  @include border(3px,solid, $color2);
-  &__logo{
-    max-width: 300px;
-    color: $color2;
-    font-family: $script;
-    font-size: $font;
+      background-color: $color1;
+      background-blend-mode: multiply;
+      background-image: url("../images/bg4.jpg");
+      background-repeat: no-repeat;
+      background-size: $cover;
+      background-position: $center;
+      margin: 50px;
+      @include border(2px, solid, $color3);
+    }
+    &__title {
+      position: $absolute;
+      font-size: $font;
+      color: $color4;
+      font-family: $satis;
+      text-align: $center;
+      z-index: 5;
+      top: 7%;
+      left: 55%;
+      transform: translate(-50%, -50%);
+      &::after {
+        content: url("../images/little-bottle.svg");
+      }
+      animation: fade 2s infinite linear;
+      @keyframes fade {
+        from {
+          right: 0px;
+          opacity: 3;
+        }
+        to {
+          right: 0px;
+          opacity: 0;
+        }
+      }
+      @media (max-width: 768px) {
+        animation: $none;
+        transform: $none;
+        color: $color7;
+        top: 0px;
+        left: 0px;
+      }
+      @media (max-width: 400px) {
+        font-size: 18px;
+      }
+    }
+    &__text {
+      color: $color7;
+      font-family: $popin;
+      line-height: $line;
+      font-size: 15px;
+      max-width: 450px;
+      margin-top: 50px;
+      width: 100%;
+      @media (max-width: 768px) {
+        font-size: 10px;
+      }
+    }
+    &__img {
+      max-width: 300px;
+      height: 300px;
+      object-fit: contain;
+      opacity: 80%;
+      @media (max-width: 768px) {
+        max-width: 200px;
+        height: 200px;
+        margin-top: 50px;
+      }
+      @media (max-width: 500px) {
+        max-width: 150px;
+        height: 150px;
+        margin-top: 200px;
+      }
+      @media (max-width: 332px) {
+        max-width: 100px;
+        height: 100px;
+      }
+    }
+    &__images {
+      display: $flex;
+      justify-content: $around;
+    }
+    @media (max-width: 500px) {
+      align-items: $center;
+      justify-content: $center;
+    }
   }
-  &__div{
-      max-width: 700px;
-      width: $width;
-      display:$flex;
-      justify-content:$between;
-      align-items: flex-end;
-      margin-left: 200px;
-      @media(max-width:768px){
+
+  // section-3 start
+  .section-3 {
+    &__container {
+      position: $relative;
+      background-color: $color6;
+      background-blend-mode: multiply;
+      background-image: url("../images/bottles.jpg");
+      background-repeat: $no-repeat;
+      background-size: $cover;
+      background-position: $center;
+      display: $flex;
+      justify-content: $between;
+      margin-bottom: 30px;
+      @include border(2px, solid, $color3);
+      @media (max-width: 768px) {
         flex-direction: $column;
       }
-  }
-  &__menu{
-    @media(max-width:500px){
-      display: $none;
+    }
+
+    &__textarea {
+      max-width: 500px;
+      width: $width;
+      height: 300px;
+      background-color: $color5;
+      background-blend-mode: multiply;
+      background-image: url("../images/kvevri.jpg");
+      background-size: $cover;
+      background-position: $center;
+      background-repeat: $no-repeat;
+      resize: $none;
+      @include border(2px, solid, $color4);
+      &::placeholder {
+        position: $absolute;
+        color: $color7;
+        font-family: $satis;
+        font-size: $font;
+        top: 30%;
+        left: 35%;
+        transform: translate(-50%, 50%);
+        opacity: 60%;
+      }
+      @media (max-width: 768px) {
+        max-width: 300px;
+      }
+    }
+    &__title {
+      color: $color7;
+      max-width: 300px;
+      width: $width;
+      position: $absolute;
+      font-size: $font;
+      font-family: $satis;
+      top: 20%;
+      left: 65%;
+      transform: translate(-50%, -50%);
+      @media (max-width: 768px) {
+        transform: $none;
+        color: $color7;
+        font-size: 20px;
+        top: 10px;
+        left: 5px;
+      }
+    }
+    &__wraper {
+      display: $flex;
+      max-width: 600px;
+      width: $width;
+      justify-content: $around;
+      align-items: $center;
+      @media (max-width: 768px) {
+        flex-direction: $column;
+        align-items: flex-start;
+      }
+    }
+    &__input {
+      max-width: 400px;
+      width: $width;
+      height: 60px;
+      background-color: $color8;
+      @include border(2px, solid, $color6);
+      &::placeholder {
+        color: $color4;
+        font-family: $popin;
+        font-size: 18px;
+      }
+      @media (max-width: 768px) {
+        max-width: 200px;
+      }
+    }
+    &__button {
+      max-width: 100px;
+      width: $width;
+      height: 30px;
+      border-radius: $fonts;
+      font-family: $popin;
+      color: $color4;
+      background-color: $color8;
+      @include border(2px, solid, $color6);
+      font-size: $fonts;
     }
   }
-  &__icons{
-    max-width: 100px;
-    width: $width;
-    display: $flex;
-    justify-content:$between;
 
+  // second page
+  .section-4 {
+    background-color: $color5;
+    background-blend-mode: multiply;
+    background-image: url("../images/rtveli-bg.jpg");
+    background-repeat: repeat;
+    background-size: $cover;
+
+    &__title {
+      background-color: rgb(119, 109, 109);
+      text-align: center;
+      font-size: $font;
+      font-family: $satis;
+      color: $color8;
+      animation: fade 3s infinite alternate;
+      @include border(1px, solid, $color8);
+    }
+    &__text {
+      font-size: 18px;
+      font-family: $popin;
+      color: $color8;
+      margin-top: 20px;
+    }
+
+    &__images {
+      display: $flex;
+      justify-content: $between;
+      padding: 50px;
+      @media (max-width: 989px) {
+        flex-direction: $column;
+        align-items: $center;
+      }
+    }
+    &__img {
+      max-width: 250px;
+      height: 250px;
+      opacity: 70%;
+      &--opac {
+        opacity: 50%;
+      }
+    }
   }
-  &__li {
-    color: $color2;
-    font-family: $popin;
-    font-size: 15px;
-    
-    &:hover {
+  // section-5
+  .section-5 {
+    background-color: $color5;
+    background-blend-mode: multiply;
+    background-image: url("../images/bg6.jpg");
+    background-repeat: no-repeat;
+    background-size: $cover;
+    margin: 50px;
+
+    &__title {
+      background-color: rgb(119, 109, 109);
+      text-align: center;
+      font-size: $font;
+      font-family: $satis;
+      color: $color8;
+      animation: fade 3s infinite alternate;
+      @include border(1px, solid, $color8);
+    }
+    &__text {
+      font-size: 18px;
+      font-family: $popin;
+      color: $color8;
+      margin-top: 20px;
+    }
+    &__images {
+      display: $flex;
+      justify-content: $between;
+      padding: 50px;
+      @media (max-width: 989px) {
+        flex-direction: $column;
+        align-items: $center;
+      }
+    }
+    &__img {
+      max-width: 250px;
+      height: 250px;
+      opacity: 60%;
+    }
+  }
+  // page3
+  .section-6 {
+    background-color: $color5;
+    background-blend-mode: multiply;
+    background-image: url("../images/bg5.jpg");
+    background-size: $cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    &__title {
+      text-align: $center;
+      font-size: $font;
+      font-family: $satis;
+      color: $color9;
+      &:hover {
+        color: $color10;
+      }
+    }
+    &__wine-title {
+      font-size: $font;
+      font-family: $script;
+      color: $color7;
+      &::after {
+        content: url("../images/little-glass.svg");
+      }
+      &::first-letter {
+        font-size: 40px;
+        color: $color10;
+      }
+    }
+
+    &__div {
+      display: $flex;
+      align-items: $center;
+      @media (max-width: 768px) {
+        flex-direction: $column;
+      }
+    }
+    &__text {
+      font-size: 20px;
+      font-family: $roboto;
+      color: $color9;
+      @media (max-width: 500px) {
+        display: $none;
+      }
+    }
+
+    &__img {
+      max-width: 250px;
+      height: 250px;
       opacity: 50%;
+      &:hover {
+        opacity: 70%;
+      }
     }
   }
-  &__margin{
-    margin-bottom: 10px;
+  // start content
+  .section-7 {
+    background-image: url("../images/bg.jpg");
+    background-color: $color1;
+    background-blend-mode: multiply;
 
+    &__title {
+      background-color: rgb(119, 109, 109);
+      text-align: center;
+      font-size: $font;
+      font-family: $satis;
+      color: $color8;
+      animation: fade 5s infinite alternate;
+      @include border(1px, solid, $color8);
+    }
+    &__div {
+      display: $flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    &__second {
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+    &__span {
+      font-size: 20px;
+      color: black;
+      font-family: $popin;
+    }
+    &__a {
+      font-size: 15px;
+      color: rgb(75, 73, 72);
+      font-family: $popin;
+    }
   }
-  &__icon{
-    color: $color1;
+
+  .footer {
+    background: rgb(41, 41, 48);
+    background: linear-gradient(
+      74deg,
+      rgba(41, 41, 48, 1) 8%,
+      rgba(69, 4, 4, 1) 76%
+    );
+    padding: $padding;
+    border: solid $color2 2px;
+    display: $flex;
+    @include border(3px, solid, $color2);
+    &__logo {
+      max-width: 300px;
+      color: $color2;
+      font-family: $script;
+      font-size: $font;
+    }
+    &__div {
+      max-width: 700px;
+      width: $width;
+      display: $flex;
+      justify-content: $between;
+      align-items: flex-end;
+      margin-left: 100px;
+      @media (max-width: 768px) {
+        flex-direction: $column;
+      }
+    }
+    &__menu {
+      @media (max-width: 500px) {
+        display: $none;
+      }
+    }
+    &__icons {
+      max-width: 100px;
+      width: $width;
+      display: $flex;
+      justify-content: $between;
+      @media (max-width: 332px) {
+        flex-direction: $column;
+      }
+    }
+    &__li {
+      color: $color2;
+      font-family: $script;
+      font-size: $line;
+
+      &:hover {
+        opacity: 50%;
+      }
+    }
+    &__margin {
+      margin-bottom: 10px;
+    }
+    &__icon {
+      color: $color1;
+    }
   }
-
-
-}
-
-
-
 }
