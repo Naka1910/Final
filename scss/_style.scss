@@ -37,6 +37,9 @@ body {
       color: $color2;
       font-family: $script;
       font-size: $font;
+      @media (max-width: 768px) {
+        font-size: 20px;
+      }
 
       &:hover {
         opacity: 50%;
@@ -51,7 +54,9 @@ body {
       display: $flex;
       justify-content: $around;
       @media (max-width: 768px) {
-        display: $none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
       }
     }
     &__icons {
@@ -71,7 +76,7 @@ body {
       display: $none;
       font-size: $font;
       position: $absolute;
-      top: 90px;
+      top: 70px;
       right: 40px;
       cursor: pointer;
       @media (max-width: 768px) {
@@ -297,7 +302,7 @@ body {
       font-size: $font;
       font-family: $satis;
       top: 20%;
-      left: 65%;
+      left: 70%;
       transform: translate(-50%, -50%);
       @media (max-width: 768px) {
         transform: $none;
